@@ -56,7 +56,6 @@ public class CourierCreateTests {
     @Description("Negative test of no opportunity to create a courier with no login and password")
     public void createCourierWithNoLoginAndPasswordTest() {
         CourierCreateData courierCreateData = new CourierCreateData(noLogin, noPassword, firstName);
-        Response response = courierApi.createCourier(courierCreateData);
         courierApi.checkNoLoginOrPasswordCourierCreate(courierApi.createCourier(courierCreateData));
     }
 

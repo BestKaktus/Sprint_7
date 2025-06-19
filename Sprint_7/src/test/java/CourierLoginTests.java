@@ -52,7 +52,7 @@ public class CourierLoginTests {
     @DisplayName("Error when logging a courier in with no login nor password")
     @Description("Negative test of failing to log in with no login nor password")
     public void loginWithNoLoginNorPasswordTest() {
-        CourierLoginData courierLoginData = new CourierLoginData(noLogin, noPassword);;
+        CourierLoginData courierLoginData = new CourierLoginData(noLogin, noPassword);
         courierApi.checkLoginWithNoLoginOrPassword(courierApi.loginCourier(courierLoginData));
     }
 

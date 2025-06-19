@@ -18,19 +18,4 @@ public abstract class BaseHttpClient {
             .addFilter(new ErrorLoggingFilter())
             .build();
 
-    protected Response doGetRequest(String path) {
-        return given()
-                .spec(baseRequestSpec)
-                .get(path)
-                .thenReturn();
-    }
-
-    protected Response doPostRequest(String path, Object body) {
-        return given()
-                .spec(baseRequestSpec)
-                .body(body)
-                .post(path)
-                .thenReturn();
-    }
-
 }
